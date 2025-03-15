@@ -6,7 +6,7 @@ rate_intrest=int(input("Enter Rate of Intrest :"))
 Time=int(input("Enter Time in Year :"))
 
 def simple_intrest(x,y,z):
-    simple_intrest=x+y+z/100
+    simple_intrest=(x*y*z)/100
     print("Simple Intrest is ",simple_intrest)
 
 simple_intrest(principal_amout,rate_intrest,Time)
@@ -18,15 +18,20 @@ simple_intrest(principal_amout,rate_intrest,Time)
 radius=int(input("Enter the radius of base :"))
 height=int(input("Enter the height of cylinder :"))
 
-def volume(a,b,c):
-    volume=a*(b**2)*c
-    print("volume of cylinder is ",volume)
+def volume(a,b):
+    volume_cal=m.pi * (a**2) * b
+    return volume_cal
+    
+cylinder_volume=volume(radius,height)
+print("Volume of cylinder is : ",cylinder_volume)
 
-price=40
-def cost(v,price):
-    cost=volume * price
-    print("cost is",cost)
+pricePerLeter=40
 
-volume(radius,m.pi,height)
+def cost(cylinder_volume,price):
+    milk_cost= cylinder_volume * pricePerLeter
+    return milk_cost
 
-cost(volume,price)
+print("Cost of cylinder is : ",cost(cylinder_volume,pricePerLeter))
+
+
+
