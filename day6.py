@@ -31,7 +31,7 @@ def cost(cylinder_volume,price):
     milk_cost= cylinder_volume * pricePerLeter
     return milk_cost
 
-print("Cost of cylinder is : ",cost(cylinder_volume,pricePerLeter))
+print("Cost of cylinder is : ",cost(cylinder_volume,pricePerLeter)," $")
 
 
 
